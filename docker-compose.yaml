@@ -1,0 +1,11 @@
+version: '3'
+services:
+  web:
+    image: nginx
+    restart: always
+    volumes:
+      - ./content:/usr/share/nginx/html:ro
+    ports:
+      - "8088:80"
+    environment:
+      - NGINX_HOST=internet.netfleps.win
